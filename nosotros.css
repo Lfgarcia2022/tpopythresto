@@ -146,6 +146,7 @@ box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.14);
 
 .fondo p {
     color: black;
+    font-weight: bold;
     display: block;
     width: 90%;
     margin: 45px;
