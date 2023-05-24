@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva | Pyth Resto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="reserva.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html#inicio"><img src="logo.png" alt="Logo pyth resto"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn"><button>RESERVAR</button></a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu">
+            
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#" id="reserva"><button>RESERVAR</button></a></li>
+        </div>
+    </header>
+    
+    
+    <main>
+        <div class="fondo">
+            <h1>Haz una reserva</h1>
+            <div class="conteiner">
+                <div class="box" id="reserva">
+                    <!--
+                        <p>Reserva una mesa en nuestro restaurante de manera rápida y fácil a través de nuestro sistema en línea. Elige el día y la hora que mejor se adapte a tus necesidades y disfruta de una experiencia gastronómica única en un ambiente acogedor y elegante</p>
+                    -->
+                    <div class="box2">
+                        <form>
+                            <label for="hora">Fecha:</label>
+                            <input type="date" min="2023-04-17"><br><br><br>
+                            <label for="hora">Horario:</label>
+                            <select name="horario" id="horario">
+                                <option value="1">12:00</option>
+                                <option value="2">12:30</option>
+                                <option value="3">13:00</option>
+                                <option value="4">13:30</option>
+                                <option value="5">14:00</option>
+                                <option value="6">14:30</option>
+                                <option value="7">15:00</option>
+                                <option value="8">20:00</option>
+                                <option value="9">20:30</option>
+                                <option value="10">21:00</option>
+                                <option value="11">21:30</option>
+                                <option value="12">22:00</option>
+                                <option value="13">22:30</option>
+                                <option value="14">23:00</option>
+                                <option value="15">23:30</option>
+                            </select><br><br><br>
+                            <label for="hora">Cantidad de personas:</label>
+                            <select id="personas" name="personas">
+                                <option value="1">1 persona</option>
+                                <option value="2">2 personas</option>
+                                <option value="3">3 personas</option>
+                                <option value="4">4 personas</option>
+                                <option value="5">5 personas</option>
+                                <option value="6">6 personas</option>
+                                <option value="7">7 personas</option>
+                                <option value="8">8 personas</option>
+                                <option value="9">9 personas</option>
+                                <option value="10">10 personas</option>
+                            </select>
+                            <input type="submit" value="Reservar" class="btn2" onclick="alert('Reserva realizada!')">
+                        </form>  
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </main>
+    
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropMenu = document.querySelector('.menu')
+
+        toggleBtn.onclick = function () {
+            dropMenu.classList.toggle('open')
+            const isOpen = dropMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>

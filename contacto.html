@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyth Resto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html#inicio"><img src="logo.png" alt="Logo pyth resto"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#" style="color: #ffd600">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="reserva.html"><button>RESERVAR</button></a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu">
+            <
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="#" style="color: #ffd600">Contacto</a></li>
+            <li><a href="reserva.html" id="reserva"><button>RESERVAR</button></a></li>
+        </div>
+    </header>
+
+    
+    <div id="map"></div>
+    <div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				<h2>Contact Us</h2>
+				<input type="text" class="field" placeholder="Nombre">
+				<input type="text" class="field" placeholder="Correo">
+				<input type="text" class="field" placeholder="Teléfono">
+				<textarea placeholder="Mensaje" class="field"></textarea>
+				<button class="btn">Enviar</button>
+			</div>
+		</div>
+	</div>
+    
+    
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuMLgdvJEDORrFgLO79a3zqrXUoORmv0I&callback=initMap"></script>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropMenu = document.querySelector('.menu')
+
+        toggleBtn.onclick = function () {
+            dropMenu.classList.toggle('open')
+            const isOpen = dropMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+
+            toggleBtn.style.backgroundColor = isOpen
+                ? '#ffd600'
+                : ''
+        }
+    </script>
+</body>
+</html>

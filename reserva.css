@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&family=Roboto+Condensed&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    list-style: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+body {
+    background-color: black;
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 8%;
+    position: sticky;
+    top: 0;
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 75px;
+    width: auto;
+    
+}
+
+.header .nav-links {
+    display: flex;   /* Inline navbar 22/04 */
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.header .nav-links li:hover, .menu li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links li a:hover {
+    color: #ffd600;
+}
+
+.header button, .toggle_btn {
+    padding: 9px 25px;
+    border: 2px solid #ffd600;
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header button:hover {
+    background-color: #ffd600;
+    border: 2px solid black;
+    color: black;
+}
+
+.header .toggle_btn {
+    cursor: pointer;
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    right: 8%;
+    top: 70px;
+    height: 0;
+    width: 290px;
+    background: rgba(0, 0, 0, 0.521);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu.open {
+    height: 290px;
+}
+
+.menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li a:hover {
+    color: #ffd600;
+}
+
+.header .menu button {
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+    background-color: #ffd600;
+    cursor: pointer;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+/* SECCIÓN DE RESERVA */
+.fondo {
+    background-color: #ffd600;
+    padding-top: 3.5rem;
+    height: 12rem;
+}
+
+.fondo h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    word-spacing: 9px;
+    color: black;
+    white-space: nowrap;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+}
+
+.box {
+    background-color: #ffffff;
+    width: 550px;
+    height: 540px;
+    padding: 20px;
+    border-radius: .25rem;
+    -webkit-box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.14); 
+box-shadow: 0px 2px 21px 0px rgba(0,0,0,0.14);
+}
+
+/*
+.box p {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    color: black;
+    padding-bottom: 7%;
+}
+*/
+
+.box2 {
+    background-color: #f3f3f3;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+    padding: 20px;
+}
+
+.box2 label, option {
+    color: black;
+}
+
+select, input {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: black;
+}
+
+.btn2 {
+    font-size: 23px;
+    padding: 10px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    background-color: #ffd600;
+    cursor: pointer;
+    color: #000000;
+    margin-top: 21%;
+}
+
+.btn2:hover{
+    background-color: #000000;
+    border: 3px solid #ffd600;
+    color: #ffffff;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .header .nav-links,
+    .header button,
+    .header .toggle_btn {
+        display: none;
+    }
+    .header .toggle_btn {
+        display: block;
+    }
+    .menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu {
+        top: 69px;
+        right: 0rem;
+        width: 100%;
+        border-radius: 0;
+        background: black;
+    }
+    .menu li {
+        height: 2.92rem;
+    }
+    .header .menu button {
+        border-radius: 0;
+        width: 28rem;
+    }
+    .header .logo img {
+        height: 65px;
+        width: auto;
+    }
+
+    .box {
+        width: 17.5rem;
+        height: 24rem;
+        padding: 15px;
+    }
+    .fondo {
+        padding-top: 2rem;
+        height: 9.5rem;
+    }
+    .fondo h1 {
+        font-size: 2rem;
+        word-spacing: 0;
+    }
+}
